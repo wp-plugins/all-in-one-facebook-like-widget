@@ -3,7 +3,7 @@
  * Plugin Name: All-in-one Facebook Like Widget
  * Plugin URI: http://www.jeroen.in
  * Description: All-in-one Facebook Like Widget. Add a Like button, stream or facebox (fans) to your site.
- * Version: 1.0
+ * Version: 1.1
  * Author: Jeroen Peters
  * Author URI: http://www.jeroen.in
  * License: GPL2
@@ -163,11 +163,107 @@ class AIO_Facebook_Like_widget extends WP_Widget
         );
 
         $available_languages = array(
-            'en_US' => __('English', 'aio-facebook-like-widget'),
-            'nl_NL' => __('Dutch', 'aio-facebook-like-widget'),
-            'fr_FR' => __('French', 'aio-facebook-like-widget'),
-            'ru_RU' => __('Russian', 'aio-facebook-like-widget'),
-            'it_IT' => __('Italian', 'aio-facebook-like-widget'),
+            'en_US-' => __('Most popular','aio-facebook-like-widget'),
+            'en_US--' => '---',
+            'en_US' => __('English','aio-facebook-like-widget')         . ' - English',
+            'fr_FR' => __('French (France)','aio-facebook-like-widget') . ' - Français',
+            'es_ES' => __('Spanish (Spain)','aio-facebook-like-widget') . ' - Español (España)',
+            'nl_NL' => __('Dutch','aio-facebook-like-widget')           . ' - Nederlands',
+            'de_DE' => __('German','aio-facebook-like-widget')          . ' - Deutsch',
+            'it_IT' => __('Italian','aio-facebook-like-widget')         . ' - Italiano',
+            'ru_RU' => __('Russian','aio-facebook-like-widget')         . ' - Русский',
+            'zh_CN' => __('Simplified Chinese','aio-facebook-like-widget') . ' - 中文(简体',
+            'pt_BR' => __('Portuguese (Brazil)','aio-facebook-like-widget') . ' Português (Brasil)',
+            'id_ID' => __('Indonesian','aio-facebook-like-widget')      . ' - Bahasa Indonesia',
+            'tr_TR' => __('Turkish','aio-facebook-like-widget')         . ' - Türkçe',
+
+            'en_US---' => '---',
+            'en_US----' => __('More languages','aio-facebook-like-widget'),
+            'en_US-----' => '---',
+
+            'fr_CA' => __('French (Canada)','aio-facebook-like-widget') . ' - Français',
+            'af_ZA' => __('Afrikaans','aio-facebook-like-widget')       . ' - Afrikaans',
+            'gn_PY' => __('Guaraní','aio-facebook-like-widget')         . ' - Avañeẽ',
+			'ay_BO' => __('Aymara','aio-facebook-like-widget')          . ' - Aymar aru',
+			'az_AZ' => __('Azeri','aio-facebook-like-widget')           . ' - Azərbaycan dili',
+			'ms_MY' => __('Malay','aio-facebook-like-widget')           . ' - Bahasa Melayu',
+			'jv_ID' => __('Javanese','aio-facebook-like-widget')        . ' - Basa Jawa',
+			'bs_BA' => __('Bosnian','aio-facebook-like-widget')         . ' - Bosanski',
+			'ca_ES' => __('Catalan','aio-facebook-like-widget')         . ' - Català',
+			'cs_CZ' => __('Czech','aio-facebook-like-widget')           . ' - Čeština',
+			'ck_US' => __('Cherokee','aio-facebook-like-widget')        . ' - Cherokee',
+			'cy_GB' => __('Welsh','aio-facebook-like-widget')           . ' - Cymraeg',
+			'da_DK' => __('Danish','aio-facebook-like-widget')          . ' - Dansk',
+			'se_NO' => __('Northern Sámi','aio-facebook-like-widget')   . ' - Davvisámegiella',
+			'et_EE' => __('Estonian','aio-facebook-like-widget')        . ' - Eesti',
+			'en_IN' => __('English (India)','aio-facebook-like-widget') . ' - English (India)',
+			'en_GB' => __('English (UK)','aio-facebook-like-widget')    . ' - English (UK)',
+			'es_LA' => __('Spanish','aio-facebook-like-widget')         . ' - Español',
+			'es_CL' => __('Spanish (Chile)','aio-facebook-like-widget') . ' - Español (Chile)',
+			'es_CO' => __('Spanish (Colombia)','aio-facebook-like-widget') . ' - Español (Colombia)',
+			'es_MX' => __('Spanish (Mexico)','aio-facebook-like-widget'). ' - Español (México)',
+			'es_VE' => __('Spanish (Venezuela)','aio-facebook-like-widget') . ' - Español (Venezuela)',
+			'eo_EO' => __('Esperanto','aio-facebook-like-widget')       . ' - Esperanto',
+			'eu_ES' => __('Basque','aio-facebook-like-widget')          . ' - Euskara',
+			'tl_PH' => __('Filipino','aio-facebook-like-widget')        . ' - Filipino',
+			'fo_FO' => __('Faroese','aio-facebook-like-widget')         . ' - Føroyskt',
+			'fy_NL' => __('Frisian','aio-facebook-like-widget')         . ' - Frysk',
+			'ga_IE' => __('Irish','aio-facebook-like-widget')           . ' - Gaeilge',
+			'gl_ES' => __('Galician','aio-facebook-like-widget')        . ' - Galego',
+			'ko_KR' => __('Korean','aio-facebook-like-widget')          . ' - 한국어',
+			'hr_HR' => __('Croatian','aio-facebook-like-widget')        . ' - Hrvatski',
+			'xh_ZA' => __('Xhosa','aio-facebook-like-widget')           . ' - isiXhosa',
+			'zu_ZA' => __('Zulu','aio-facebook-like-widget')            . ' - isiZulu',
+			'is_IS' => __('Icelandic','aio-facebook-like-widget')       . ' - Íslenska',
+			'sw_KE' => __('Swahili','aio-facebook-like-widget')         . ' - Kiswahili',
+			'tl_ST' => __('Klingon','aio-facebook-like-widget')         . ' - tlhIngan-Hol',
+			'ku_TR' => __('Kurdish','aio-facebook-like-widget')         . ' - Kurdî',
+			'lv_LV' => __('Latvian','aio-facebook-like-widget')         . ' - Latviešu',
+			'lt_LT' => __('Lithuanian','aio-facebook-like-widget')      . ' - Lietuvių',
+			'li_NL' => __('Limburgish','aio-facebook-like-widget')      . ' - Lèmbörgs',
+			'la_VA' => __('Latin','aio-facebook-like-widget')           . ' - lingua latina',
+			'hu_HU' => __('Hungarian','aio-facebook-like-widget')       . ' - Magyar',
+			'mg_MG' => __('Malagasy','aio-facebook-like-widget')        . ' - Malagasy',
+			'mt_MT' => __('Maltese','aio-facebook-like-widget')         . ' - Malti',
+			'nl_BE' => __('Dutch (Flemish)','aio-facebook-like-widget')  . ' - Nederlands (België)',
+			'ja_JP' => __('Japanese','aio-facebook-like-widget')        . ' - 日本語',
+			'nb_NO' => __('Norwegian (bokmal)','aio-facebook-like-widget') . ' - Norsk (bokmål)',
+			'nn_NO' => __('Norwegian (nynorsk)','aio-facebook-like-widget') . ' - Norsk (nynorsk)',
+			'uz_UZ' => __('Uzbek','aio-facebook-like-widget')           . ' - Ozbek',
+			'pl_PL' => __('Polish','aio-facebook-like-widget')          . ' - Polski',
+			'pt_PT' => __('Portuguese (Portugal','aio-facebook-like-widget') . ' - Português (Portugal)',
+			'qu_PE' => __('Quechua','aio-facebook-like-widget')         . ' - Qhichwa',
+			'ro_RO' => __('Romanian','aio-facebook-like-widget')        . ' - Română',
+			'rm_CH' => __('Romansh','aio-facebook-like-widget')         . ' - Rumantsch',
+			'sq_AL' => __('Albanian','aio-facebook-like-widget')        . ' - Shqip',
+			'sk_SK' => __('Slovak','aio-facebook-like-widget')          . ' - Slovenčina',
+			'sl_SI' => __('Slovenian','aio-facebook-like-widget')       . ' - Slovenščina',
+			'so_SO' => __('Somali','aio-facebook-like-widget')          . ' - Soomaaliga',
+			'fi_FI' => __('Finnish','aio-facebook-like-widget')         . ' - Suomi',
+			'sv_SE' => __('Swedish','aio-facebook-like-widget')         . ' - Svenska',
+			'th_TH' => __('Thai','aio-facebook-like-widget')            . ' - ภาษาไทย',
+			'vi_VN' => __('Vietnamese','aio-facebook-like-widget')      . ' - Tiếng Việt',
+			'zh_TW' => __('Traditional Chinese, Taiwan','aio-facebook-like-widget') . ' - 中文(台灣',
+			'zh_HK' => __('Traditional Chinese, Hong Kong','aio-facebook-like-widget') . ' - 中文(香港',
+			'el_GR' => __('Greek','aio-facebook-like-widget')           . ' - Ελληνικά',
+			'be_BY' => __('Belarusian','aio-facebook-like-widget')      . ' - Беларуская',
+			'bg_BG' => __('Bulgarian','aio-facebook-like-widget')       . ' - Български',
+			'kk_KZ' => __('Kazakh','aio-facebook-like-widget')          . ' - Қазақша',
+			'mk_MK' => __('Macedonian','aio-facebook-like-widget')      . ' - Македонски',
+			'mn_MN' => __('Mongolian','aio-facebook-like-widget')       . ' - Монгол',
+			'sr_RS' => __('Serbian','aio-facebook-like-widget')         . ' - Српски',
+			'uk_UA' => __('Ukrainian','aio-facebook-like-widget')       . ' - Українська',
+			'he_IL' => __('Hebrew','aio-facebook-like-widget')          . ' - ‏עברית‏',
+			'sy_SY' => __('Syriac','aio-facebook-like-widget')          . ' - ‏ܐܪܡܝܐ‏',
+			'ne_NP' => __('Nepali','aio-facebook-like-widget')          . ' - नेपाली',
+			'hi_IN' => __('Hindi','aio-facebook-like-widget')           . ' - हिन्दी',
+			'bn_IN' => __('Bengali','aio-facebook-like-widget')         . ' - বাংলা',
+			'pa_IN' => __('Punjabi','aio-facebook-like-widget')         . ' - ਪੰਜਾਬੀ',
+			'ta_IN' => __('Tamil','aio-facebook-like-widget')           . ' - தமிழ்',
+
+            'en_PI' => __('English (Pirate)','aio-facebook-like-widget'). ' - English (Pirate)',
+            'en_UD' => __('English (Upside Down)','aio-facebook-like-widget') . ' - English (Upside Down)',
+            'fb_LT' => __('Leet Speak','aio-facebook-like-widget')      . ' - Leet Speak',
         );
 
 		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
@@ -188,7 +284,7 @@ class AIO_Facebook_Like_widget extends WP_Widget
 
 		<!-- Facebook pagename or id: Text Input -->
 		<p>
-			<label for="<?php echo $this->get_field_id('page_name'); ?>" title="<?php _e('This is the name of your page (the part after http://facebook.com/)', 'aio-facebook-like-widget') ?>"><?php _e('Facebook Page Name (or Id)', 'aio-facebook-like-widget') ?>:</label>
+			<label for="<?php echo $this->get_field_id('page_name'); ?>" title="<?php _e('This is the name of your page (the part after http://facebook.com/', 'aio-facebook-like-widget') ?>"><?php _e('Facebook Page Name (or Id)', 'aio-facebook-like-widget') ?>:</label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id('page_name'); ?>" name="<?php echo $this->get_field_name('page_name'); ?>" value="<?php echo $instance['page_name']; ?>" />
 		</p>
 
@@ -201,7 +297,7 @@ class AIO_Facebook_Like_widget extends WP_Widget
         <!-- Languages: Selectbox input -->
         <p>
             <label for="<?php echo $this->get_field_id('language'); ?>"><?php _e('Language', 'aio-facebook-like-widget') ?>:</label>
-            <select id="<?php echo $this->get_field_id('language'); ?>" name="<?php echo $this->get_field_name('language'); ?>">
+            <select id="<?php echo $this->get_field_id('language'); ?>" name="<?php echo $this->get_field_name('language'); ?>" style="max-width: 100%;">
                 <?php
                 foreach($available_languages as $lang_code => $lang_name)
                 {

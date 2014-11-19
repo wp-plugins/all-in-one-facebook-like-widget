@@ -2,7 +2,7 @@
 Contributors: jeroenpeters1986
 Tags: facebook, like button, like box, facebox, fanpage, like
 Requires at least: 3.0
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: "trunk"
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -22,6 +22,11 @@ If you are looking for a quick and simple way to display a Facebook Like box, th
 All you have to do is install this plugin, drag the widget to where you want to display it, configure it in the widget admin screen and that's about it!
 Now your visitors can like your Facebook page straight from your website.
 
+** Extra's: **
+* Language selector, choose which language the Like button displays
+* Option to show the default Facebook border around the widget
+* Choose between the Facebook Light or Dark theme
+
 *Based on 'HC Facebook Like Widget' which seems not to be maintained anymore.*
 
 Do you have new ideas or suggestions? Tell me in the plugin forums or tweet @jeroen_p
@@ -36,7 +41,7 @@ As this is a Wordpress Widget it's very easy to install.
 
 == Frequently Asked Questions ==
 
-= What do I need to input at Facebook page? =
+= What do I need to input in the box that's titled `Facebook page`? =
 
 When you add the widget, you can insert your Facebook page name. If your Facebook-url is http://facebook.com/quoteshirts, the only thing you need to insert is just 'quoteshirts'.
 
@@ -51,13 +56,20 @@ Yes, through this plugin information page.
 
 == Screenshots ==
 
-1. Widget admin section of Facebook like widget Plugin
-2. Sidebar front-end Facebook Like widget Plugin
+1. Widget admin section of this plugin / widget
+2. Sidebar front-end of widget
+2. Entire page with the Facebook Like Widget
 
 == Changelog ==
 
+= 1.1 =
+ - Added language selector with all of the Facebook languages, including Frysian, Limburgian, Leetspeak, Upside down and pirate!
+
 = 1.0 =
-First version released to the public
+ - Refactored old code
+ - Added border-option
+ - Changed form layout
+ - First version released to the public
 
 = 0.0 =
-Initial version, that was called HC Facebook Like Widget
+ - Initial version, known as HC Facebook Like Widget
