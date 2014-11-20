@@ -27,6 +27,96 @@ Now your visitors can like your Facebook page straight from your website.
 * Option to show the default Facebook border around the widget
 * Choose between the Facebook Light or Dark theme
 
+** Widget settings screen available in two languages: **
+* English
+* Dutch
+
+** Languages supported for the widget: **
+* English
+* French
+* Spanish
+* Dutch
+* German
+* Italian
+* Russian
+* Simplified Chinese
+* Portuguese
+* Indonesian
+* Turkish
+
+* Afrikaans
+* Guaraní
+* Aymara
+* Azeri
+* Malay
+* Javanese
+* Bosnian
+* Catalan
+* Czech
+* Cherokee
+* Welsh
+* Danish
+* Northern Sámi
+* Estonian
+* English (Pirate)
+* English (Upside Down)
+* Esperanto
+* Basque
+* Filipino
+* Faroese
+* Frisian
+* Irish
+* Galician
+* Korean
+* Croatian
+* Xhosa
+* Zulu
+* Icelandic
+* Swahili
+* Klingon
+* Kurdish
+* Latvian
+* Leet Speak
+* Lithuanian
+* Limburgish
+* Latin
+* Hungarian
+* Malagasy
+* Maltese
+* Japanese
+* Norwegian (bokmal)
+* Norwegian (nynorsk)
+* Uzbek
+* Polish
+* Quechua
+* Romanian
+* Romansh
+* Albanian
+* Slovak
+* Slovenian
+* Somali
+* Finnish
+* Swedish
+* Thai
+* Vietnamese
+* Traditional Chinese (Taiwan)
+* Traditional Chinese (Hong Kong)
+* Greek
+* Belarusian
+* Bulgarian
+* Kazakh
+* Macedonian
+* Mongolian
+* Serbian
+* Ukrainian
+* Hebrew
+* Syriac
+* Nepali
+* Hindi
+* Bengali
+* Punjabi
+* Tamil
+
 *Based on 'HC Facebook Like Widget' which seems not to be maintained anymore.*
 
 Do you have new ideas or suggestions? Tell me in the plugin forums or tweet @jeroen_p
@@ -61,6 +151,9 @@ Yes, through this plugin information page.
 2. Entire page with the Facebook Like Widget
 
 == Changelog ==
+
+= 1.2 =
+ - Added Dutch translation for the widget-settings screen
 
 = 1.1 =
  - Added language selector with all of the Facebook languages, including Frysian, Limburgian, Leetspeak, Upside down and pirate!

@@ -3,7 +3,7 @@
  * Plugin Name: All-in-one Facebook Like Widget
  * Plugin URI: http://www.jeroen.in
  * Description: All-in-one Facebook Like Widget. Add a Like button, stream or facebox (fans) to your site.
- * Version: 1.1
+ * Version: 1.2
  * Author: Jeroen Peters
  * Author URI: http://www.jeroen.in
  * License: GPL2
