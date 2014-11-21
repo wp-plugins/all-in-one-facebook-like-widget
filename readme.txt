@@ -99,7 +99,7 @@ Yes, through this plugin information page.
 
 == Changelog ==
 
-= 1.2.1 =
+= 1.2.2 =
  - Enabled language support for widget
  - Re-did readme file
 

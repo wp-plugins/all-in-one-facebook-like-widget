@@ -3,21 +3,27 @@
  * Plugin Name: All-in-one Facebook Like Widget
  * Plugin URI: http://www.jeroen.in
  * Description: All-in-one Facebook Like Widget. Add a Like button, stream or facebox (fans) to your site.
- * Version: 1.2.1
+ * Version: 1.2.2
  * Author: Jeroen Peters
  * Author URI: http://www.jeroen.in
  * License: GPL2
  */
 
-add_action('widgets_init','AIO_Facebook_Like_widget_register');
-function AIO_Facebook_Like_widget_register()
+/* Make sure we don't expose any info if called directly */
+if (! function_exists('add_action'))
 {
-	register_widget('AIO_Facebook_Like_widget');
+    echo 'Nothing to see here. Move along now people.';
+    exit;
 }
 
-/* Enable language support */
-$plugin_dir = basename( dirname( __FILE__ ) );
-load_plugin_textdomain('aio-facebook-like-widget', false, $plugin_dir . '/lang/');
+function AIO_Facebook_Like_widget_register()
+{
+    load_plugin_textdomain('aio-facebook-like-widget', FALSE, dirname(plugin_basename(__FILE__)).'/lang/');
+
+	return register_widget('AIO_Facebook_Like_widget');
+}
+add_action('widgets_init','AIO_Facebook_Like_widget_register');
+
 
 class AIO_Facebook_Like_widget extends WP_Widget
 {
