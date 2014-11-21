@@ -15,6 +15,7 @@ All-in-one Facebook Like Widget. Lets you quickly add a Like Button, activity st
 If you are looking for a quick and simple way to display a Facebook Like box, this is your plugin!
 
 **You choose to display:**
+
 * ..just a simple box with Facebook Like button and profile picture
 * ..a like button + timeline stream (offcourse with a Like button and profile picture)
 * ..a like button + list of your fans or friends (also with a Like button and profile picture)
@@ -22,16 +23,19 @@ If you are looking for a quick and simple way to display a Facebook Like box, th
 All you have to do is install this plugin, drag the widget to where you want to display it, configure it in the widget admin screen and that's about it!
 Now your visitors can like your Facebook page straight from your website.
 
-** Extra's: **
+**Extra's:**
+
 * Language selector, choose which language the Like button displays
 * Option to show the default Facebook border around the widget
 * Choose between the Facebook Light or Dark theme
 
-** Widget settings screen available in two languages: **
+**Widget settings screen available in two languages:**
+
 * English
 * Dutch
 
-** Languages supported for the widget: **
+**Over 70 languages supported for the widget, most popular:**
+
 * English
 * French
 * Spanish
@@ -43,79 +47,17 @@ Now your visitors can like your Facebook page straight from your website.
 * Portuguese
 * Indonesian
 * Turkish
-
-* Afrikaans
-* Guaraní
-* Aymara
-* Azeri
-* Malay
-* Javanese
-* Bosnian
-* Catalan
-* Czech
-* Cherokee
-* Welsh
-* Danish
-* Northern Sámi
-* Estonian
-* English (Pirate)
-* English (Upside Down)
-* Esperanto
-* Basque
-* Filipino
-* Faroese
-* Frisian
-* Irish
-* Galician
-* Korean
-* Croatian
-* Xhosa
-* Zulu
-* Icelandic
-* Swahili
-* Klingon
-* Kurdish
-* Latvian
-* Leet Speak
-* Lithuanian
-* Limburgish
-* Latin
-* Hungarian
-* Malagasy
-* Maltese
 * Japanese
-* Norwegian (bokmal)
-* Norwegian (nynorsk)
-* Uzbek
-* Polish
-* Quechua
-* Romanian
-* Romansh
-* Albanian
-* Slovak
-* Slovenian
-* Somali
+* Greek
 * Finnish
 * Swedish
-* Thai
-* Vietnamese
-* Traditional Chinese (Taiwan)
-* Traditional Chinese (Hong Kong)
-* Greek
-* Belarusian
-* Bulgarian
-* Kazakh
-* Macedonian
-* Mongolian
-* Serbian
-* Ukrainian
-* Hebrew
-* Syriac
-* Nepali
-* Hindi
-* Bengali
 * Punjabi
-* Tamil
+* Polish
+* English (Pirate)
+* English (Upside Down)
+* Klingon
+* Leet Speak
+* And over 50 others!
 
 *Based on 'HC Facebook Like Widget' which seems not to be maintained anymore.*
 
@@ -137,8 +79,13 @@ When you add the widget, you can insert your Facebook page name. If your Faceboo
 
 You can also input your Facebook page ID. This is the 'unfriendly' identifier of your page
 If you need help finding it, we recommend using one of these websites:
+
 * <http://lookup-id.com>
 * <http://findmyfacebookid.com>
+
+= Can I translate the plugin? =
+
+You are more than welcome to! Please open a support topic and we can discuss it there.
 
 = Can I contact you? =
 
@@ -151,6 +98,10 @@ Yes, through this plugin information page.
 2. Entire page with the Facebook Like Widget
 
 == Changelog ==
+
+= 1.2.1 =
+ - Enabled language support for widget
+ - Re-did readme file
 
 = 1.2 =
  - Added Dutch translation for the widget-settings screen
