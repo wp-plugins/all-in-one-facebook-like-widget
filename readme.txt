@@ -2,7 +2,7 @@
 Contributors: jeroenpeters1986
 Tags: facebook, like button, like box, facebox, fanpage, like
 Requires at least: 3.0
-Tested up to: 4.2.1
+Tested up to: 4.2.2
 Stable tag: "trunk"
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -28,6 +28,7 @@ Now your visitors can like your Facebook page straight from your website.
 * Language selector, choose which language the Like button displays
 * Option to show the default Facebook border around the widget
 * Choose between the Facebook Light or Dark theme
+* Set your own height (hidden feature of Facebooks widget, not many plugins have it)
 
 **Widget settings screen available in two languages:**
 
@@ -98,6 +99,10 @@ Yes, through this plugin information page.
 2. Entire page with the Facebook Like Widget
 
 == Changelog ==
+
+= 1.3 =
+ - Added height-support
+ - WordPress 4.2.2 compatible
 
 = 1.2.2 =
  - Enabled language support for widget

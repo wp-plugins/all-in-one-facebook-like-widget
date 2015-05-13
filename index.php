@@ -3,7 +3,7 @@
  * Plugin Name: All-in-one Facebook Like Widget
  * Plugin URI: http://www.jeroen.in
  * Description: All-in-one Facebook Like Widget. Add a Like button, stream or facebox (fans) to your site.
- * Version: 1.2.2
+ * Version: 1.3
  * Author: Jeroen Peters
  * Author URI: http://www.jeroen.in
  * License: GPL2
@@ -35,6 +35,7 @@ class AIO_Facebook_Like_widget extends WP_Widget
 	private $facebook_id = "";
 	private $facebook_username = "quoteshirts";
 	private $facebook_width = "240";
+	private $facebook_height = "auto";
     private $facebook_language = "en_US";
     private $facebook_colorscheme = "light";
     private	$facebook_show_border = "false";
@@ -72,6 +73,7 @@ class AIO_Facebook_Like_widget extends WP_Widget
 		$this->facebook_id = $instance['app_id'];
 		$this->facebook_username = $instance['page_name'];
 		$this->facebook_width = $instance['width'];
+	    $this->facebook_height = $instance['height'];
         $this->facebook_language = $instance['language'];
         $this->facebook_colorscheme = $instance['colorscheme'];
 		$this->facebook_show_faces = ($instance['show_faces'] == "1"? "true" : "false");
@@ -94,6 +96,9 @@ class AIO_Facebook_Like_widget extends WP_Widget
 			<div class="fb-like-box"
 				data-href="http://www.facebook.com/<?php echo $this->facebook_username;?>"
 				data-width="<?php echo $this->facebook_width;?>"
+				<?php if(! empty($this->facebook_height) && $this->facebook_height != 'auto') {
+					echo 'data-height="' . $this->facebook_height . '"' . "\n";
+                }?>
 				data-show-faces="<?php echo $this->facebook_show_faces;?>"
 				data-stream="<?php echo $this->facebook_show_stream;?>"
 				data-header="<?php echo $this->facebook_show_header;?>"
@@ -129,21 +134,21 @@ class AIO_Facebook_Like_widget extends WP_Widget
 	public function update($new_instance, $old_instance)
     {
         $facebook_strips = array(
-            "facebook.com/",
             "http://facebook.com/",
             "https://facebook.com/",
             "http://www.facebook.com/",
             "https://www.facebook.com/",
+	        "facebook.com/",
         );
 
 		$instance = $old_instance;
 
 		/* Strip tags for title and name to remove HTML (important for text inputs) */
 		$instance['title'] = strip_tags($new_instance['title']);
-		//$instance['app_id'] = strip_tags($new_instance['app_id']);
         $instance['page_name'] = str_replace($facebook_strips, array(), strip_tags($new_instance['page_name']));
 
 		$instance['width'] = strip_tags($new_instance['width']);
+	    $instance['height'] = strip_tags($new_instance['height']);
         $instance['language'] = strip_tags($new_instance['language']);
         $instance['colorscheme'] = strip_tags($new_instance['colorscheme']);
         $instance['show_border'] = (bool)$new_instance['show_border'];
@@ -164,6 +169,7 @@ class AIO_Facebook_Like_widget extends WP_Widget
             'app_id' => $this->facebook_id,
             'page_name' => $this->facebook_username,
             'width' => $this->facebook_width,
+            'height' => $this->facebook_height,
             'language' => $this->facebook_language,
             'colorscheme' => $this->facebook_colorscheme,
             'show_border' => $this->facebook_show_border,
@@ -284,14 +290,6 @@ class AIO_Facebook_Like_widget extends WP_Widget
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $instance['title']; ?>" />
 		</p>
 
-		<!-- App id: Text Input
-		Don't need that for now!
-		<p>
-			<label for="<?php echo $this->get_field_id('app_id'); ?>"><?php _e('App Id', 'aio-facebook-like-widget') ?></label>
-			<input type="text" class="widefat" id="<?php echo $this->get_field_id('app_id'); ?>" name="<?php echo $this->get_field_name('app_id'); ?>" value="<?php echo $instance['app_id']; ?>" />
-		</p>
-		-->
-
 		<!-- Facebook pagename or id: Text Input -->
 		<p>
 			<label for="<?php echo $this->get_field_id('page_name'); ?>" title="<?php _e('This is the name of your page (the part after http://facebook.com/', 'aio-facebook-like-widget') ?>"><?php _e('Facebook Page Name (or Id)', 'aio-facebook-like-widget') ?>:</label>
@@ -303,6 +301,13 @@ class AIO_Facebook_Like_widget extends WP_Widget
 			<label for="<?php echo $this->get_field_id('width'); ?>"><?php _e('Width', 'aio-facebook-like-widget') ?>:</label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id('width'); ?>" name="<?php echo $this->get_field_name('width'); ?>" value="<?php echo $instance['width']; ?>" />
 		</p>
+
+
+	    <!-- Height: Text Input -->
+	    <p>
+		    <label for="<?php echo $this->get_field_id('height'); ?>" title="<?php _e("Leave blank or set to 'auto' to let the plugin determine the best height", 'aio-facebook-like-widget') ?>"><?php _e('Height', 'aio-facebook-like-widget') ?>:</label>
+		    <input type="text" class="widefat" id="<?php echo $this->get_field_id('Height'); ?>" name="<?php echo $this->get_field_name('height'); ?>" value="<?php echo $instance['height']; ?>" />
+	    </p>
 
         <!-- Languages: Selectbox input -->
         <p>
